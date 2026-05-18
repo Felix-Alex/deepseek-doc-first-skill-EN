@@ -54,7 +54,7 @@ Copy `SKILL.md` into your AI assistant's rules, skills, or instructions director
 
 **DeepSeek TUI**
 ```bash
-deepseek skill install Felix-Alex/deepseek-doc-first-skill-EN
+deepseek skill install Felix-Alex/doc-first-skill-EN
 ```
 Or place in `.deepseek/skills/` or your user-level skills directory.
 
