@@ -2,7 +2,7 @@
 
 > **Stop guessing. Verify the docs first.**
 
-A [DeepSeek TUI](https://github.com/deepseek-ai/deepseek-tui) skill that **prohibits execution** of any third-party API integration until four verifiable clearance conditions are met — a structured, auditable workflow that catches deprecated endpoints, stale parameters, and breaking changes *before* they ship.
+An **AI coding assistant skill** that **prohibits execution** of any third-party API integration until four verifiable clearance conditions are met — a structured, auditable workflow that catches deprecated endpoints, stale parameters, and breaking changes *before* they ship. Works with DeepSeek TUI, Claude Code, Cursor, GitHub Copilot, and any assistant that supports custom rules or skills.
 
 ---
 
@@ -50,14 +50,22 @@ HTTP 401 / 403 / 404 / 429, signature failures, deprecated notices, SDK method-n
 
 ## Installation
 
-Requires [DeepSeek TUI](https://github.com/deepseek-ai/deepseek-tui).
+Copy `SKILL.md` into your AI assistant's rules, skills, or instructions directory:
 
+**DeepSeek TUI**
 ```bash
-# Install from GitHub
 deepseek skill install Felix-Alex/deepseek-doc-first-skill-EN
 ```
+Or place in `.deepseek/skills/` or your user-level skills directory.
 
-Or manually: copy `SKILL.md` into your project's `.deepseek/skills/` directory or user-level skills directory.
+**Claude Code**
+Place in `.claude/rules/` or reference via `@` file include in CLAUDE.md.
+
+**Cursor / Copilot / Other**
+Include in your project's `.cursorrules`, `.github/copilot-instructions.md`, or equivalent instructions file.
+
+**Manual (any tool)**
+Copy `SKILL.md` and instruct your assistant to "Follow the rules in SKILL.md for all third-party API work."
 
 ---
 
